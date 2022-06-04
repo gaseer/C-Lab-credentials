@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Questions</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Multiplication Problem Creator</h1>
+    <form action="PayslipServlet" method="get">      
+    <p>How many questions you want : <input type="number" name="ques"></p>
+    <p>and how many digits in it  :   <input type="number" name="digit" ></p>
+    <input class="button-73" onclick="createTable(form)" role="button" value=" Create Questions "> 
+    </form>
+    <button class="button button1" onclick="window.print()">PRINT</button>
+        <br/>
+        <table id="myTable" border="1"> 
+        </table>
+</body>
+<script src="script.js"></script>
+</html>
