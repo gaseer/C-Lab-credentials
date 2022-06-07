@@ -5,26 +5,25 @@ Sum of its divisor is 13 + 53;+ 33; = 1+125+27 = 153*/
 
 void main()
 {
-    int num, r, sum, temp;
-    int stno, enno;
+    int num, d, sum, n, start, end;
 
     printf("Input starting number of range: ");
-    scanf("%d", &stno);
+    scanf("%d", &start);
 
     printf("Input ending number of range : ");
-    scanf("%d", &enno);
+    scanf("%d", &end);
 
     printf("Armstrong numbers in given range are: ");
-    for (num = stno; num <= enno; num++)
+    for (num = start; num <= end; num++)
     {
-        temp = num;
+        n = num;
         sum = 0;
 
-        while (temp != 0)
+        while (n > 0)
         {
-            r = temp % 10;
-            temp = temp / 10;
-            sum = sum + (r * r * r);
+            d = n % 10;
+            sum = sum + (d * d * d);
+            n = n / 10;
         }
         if (sum == num)
             printf("%d ", num);
