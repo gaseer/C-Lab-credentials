@@ -26,7 +26,7 @@ void main()
             n = n / 10;
         }
         if (sum == num)
-            printf("%d ", num);
+            printf("%d, ", num);
     }
     printf("\n");
 }
