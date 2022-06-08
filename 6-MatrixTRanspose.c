@@ -14,31 +14,26 @@ int main()
             scanf("%d", &a[i][j]);
         }
 
-    // printing the matrix a[][]
+    // printing the matrix we entered a[][]
     printf("\nEntered matrix: \n");
     for (int i = 0; i < r; ++i)
+    {
         for (int j = 0; j < c; ++j)
         {
-            printf("%d  ", a[i][j]);
-            if (j == c - 1)
-                printf("\n");
+            printf("%d\t  ", a[i][j]);
         }
-
-    // computing the transpose
-    for (int i = 0; i < r; ++i)
-        for (int j = 0; j < c; ++j)
-        {
-            transpose[j][i] = a[i][j];
-        }
+        printf("\n");
+    }
 
     // printing the transpose
     printf("\nTranspose of the matrix:\n");
     for (int i = 0; i < c; ++i)
+    {
         for (int j = 0; j < r; ++j)
         {
-            printf("%d  ", transpose[i][j]);
-            if (j == r - 1)
-                printf("\n");
+            printf("%d\t ", a[j][i]);
         }
+        printf("\n");
+    }
     return 0;
 }
