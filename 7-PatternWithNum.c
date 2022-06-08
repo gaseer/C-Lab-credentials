@@ -1,7 +1,22 @@
 #include <stdio.h>
 #include <conio.h>
 
-void main()
+int main()
+{
+    int a[5] = {3, 9, 1, 7, 4};
+    int i, j;
+    for (i = 5; i >= 1; i--)
+    {
+        for (j = i; j >= 1; j--)
+        {
+            printf("%d", a[5-j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+/*void main()
 {
     int n, l, t;
     printf("Enter a number : ");
@@ -11,4 +26,4 @@ void main()
     printf("\nThe pattern\n");
     for (t = n; t != 0; t %= l, l /= 10)
         printf("\n%d", t);
-}
+}*/
