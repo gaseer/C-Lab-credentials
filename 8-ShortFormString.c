@@ -1,4 +1,32 @@
 #include <stdio.h>
+#include <string.h>
+void main()
+{
+    char s[50], sF[10];
+    int len, n = 0, j = 0, i;
+    printf("Enter a string : ");
+    gets(s);
+    len = strlen(s);
+    for (i = 0; i < len; i++)
+    {
+        sF[n] = s[j];
+        if (s[i] == ' ')
+        {
+            n = n + 1;
+            j = i;
+            sF[n] = s[j++];
+            // j++;
+        }
+    }
+    printf("\nShort form is :%s", sF);
+    // puts(sF);
+    return 0;
+}
+
+
+
+
+/*#include <stdio.h>
 #include <conio.h>
 // TECHIES WEBSITE CODE
 void main()
@@ -19,27 +47,4 @@ void main()
     }
     ss[j] = '\0';
     printf("\nShort form is %s", ss);
-}
-
-/*STACK OVERFLOW
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-    char sent[100];
-    char *ptr;
-    printf("Enter a sentence : ");
-    gets(sent);
-
-    char len = strlen(sent);
-    printf("%c", *sent);
-    ptr = &sent;
-    for (int i = 1; i < len; i++)
-    {
-        if (*(ptr + i - 1) == ' ')
-        {
-            printf(" %c", *(ptr + i));
-        }
-    }
-    return 0;
 }*/
