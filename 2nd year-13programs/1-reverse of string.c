@@ -11,7 +11,6 @@ void main()
     printf("\nTHE REVERSE OF THE STRING IS:");
     for (i = len; i >= 0; i--)
     {
-        printf("%d", s);
         printf("%c", *(s + i));
     }
     getch();
