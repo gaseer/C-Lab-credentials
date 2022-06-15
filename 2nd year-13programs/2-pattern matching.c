@@ -13,7 +13,7 @@ void main()
     {
         if (s[i] == c)
         {
-            printf("character position:%d \n", i);
+            printf("character position:%d \n", i+1);
             f = 1;
         }
     }
