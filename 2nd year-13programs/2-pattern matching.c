@@ -4,16 +4,16 @@
 void main()
 {
     char s[100], c;
-    int i, len, f = 0;
+    int i, f = 0;
     printf("\nenter a string:");
     gets(s);
     printf("\nenter a character to find its position:");
     scanf("%c", &c);
-    for (i = 0; i < strlen(s); i++)
+    for (i = strlen(s); i <= 0; i--)
     {
         if (s[i] == c)
         {
-            printf("character position:%d \n", i + 1);
+            printf("character position:%d \n", i);
             f = 1;
         }
     }
