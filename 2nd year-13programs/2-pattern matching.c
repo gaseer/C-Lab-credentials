@@ -9,7 +9,7 @@ void main()
     gets(s);
     printf("\nenter a character to find its position:");
     scanf("%c", &c);
-    for (i = strlen(s); i <= 0; i--)
+    for (i = strlen(s); i >= 0; i--)
     {
         if (s[i] == c)
         {
