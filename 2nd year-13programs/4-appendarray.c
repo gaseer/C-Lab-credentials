@@ -1,30 +1,32 @@
 #include <stdio.h>
 
-#define N 5
-#define M (N * 2)
-
 int main()
 {
-    int a[N], b[N], c[M], i, index = 0;
+    int i,j,k,n,m,total,a[30],b[30],c[60];
 
-    printf("Enter %d integer numbers, for first array\n", N);
-    for (i = 0; i < N; i++)
-        scanf("%d", &a[i]);
+    printf("enter size of 1st array:");
+    scanf("%d",&n);
+    printf("enter %d elements \n",n);
+    for(i=0;i<n;++i)
+    {scanf("%d",&a[i]);}
 
-    printf("Enter %d integer numbers, for second array\n", N);
-    for (i = 0; i < N; i++)
-        scanf("%d", &b[i]);
+    printf("enter size of 2nd array:");
+    scanf("%d",&m);
+    printf("enter %d elements \n",m);
+    for(j=0;j<m;++j)
+    {scanf("%d",&b[j]);}
 
-    printf("\nMerging a[%d] and b[%d] to form c[%d] ..\n", N, N, M);
-    for (i = 0; i < N; i++)
-        c[index++] = a[i];
-
-    for (i = 0; i < N; i++)
-        c[index++] = b[i];
-
-    printf("\nElements of c[%d] is ..\n", M);
-    for (i = 0; i < M; i++)
-        printf("%d\n", c[i]);
-
-    return 0;
+    total=m+n;
+    i=0,j=0;
+    for(i=0;i<n;++i)
+    {
+       c[i]=a[i];
+    }
+    for(j=0;j<m;++j,++n)
+    {
+       c[n]=b[j];
+    }
+    printf("Array after appending \n");
+    for(k=0;k<total;++k)
+    {printf("%d\n",c[k]);}
 }
